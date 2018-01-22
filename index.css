@@ -1,10 +1,46 @@
 
+/* ---- reset ---- */
+
+
+
+
+/* ---- typography ---- */
+
 body {
-  background-color: tomato;
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  background: tomato;
+  
 }
 
 
-.p-container{
+
+
+
+
+/* ---- layout ---- */
+
+
+
+
+
+/* ---- components ---- */
+
+
+#splash {
+  text-align: center;
+}
+
+#game-over {
+  text-align: center;
+}
+
+
+
+
+
+#p-container{
    background-color: rgba(128, 128, 128, 0.6);
    position:relative;
    bottom: 80px;
@@ -13,7 +49,8 @@ body {
    padding: 25px;
 
 }
-.splash-container{
+
+#splash-container{
     font-family: Arial, Helvetica, sans-serif;
     display:flex;
     flex-direction: column;
@@ -24,7 +61,7 @@ body {
 }
 
 
-.splash-container h1{
+#splash-container h1{
    font-size: 4em;
     margin: 0;
    position: relative;
