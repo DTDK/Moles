@@ -1,7 +1,7 @@
 'use strict'
 
 
-function main(){
+function main(){ // Main function loads all the content?..
 
     var score;
     var speed;
@@ -11,14 +11,19 @@ function main(){
     var stage;
     var game;
 
-    // Splash Screen
+    // Splash Screen (Initial screen)
     var splashContainer;
-    var pContainer;
-    var splashTitle;
-    var splashInstruct;
-    var splashButton;
+    var gameTitle;
+    var instructionsContainer;
+    var gameInstructions;
+    var startButton;
+    var handleStartButton = function(){
+        eraseSplash();
+        beginGame();
+    };
 
-    function buildSplash(){
+
+    function buildSplash(){  
 
       stage = 'splash';
 
@@ -28,31 +33,105 @@ function main(){
 
       
 
-      splashTitle = document.createElement('h1');
-      splashTitle.innerText = 'MOLES';
-      splashContainer.appendChild(splashTitle);
+      gameTitle = document.createElement('h1');
+      gameTitle.innerText = 'MOLES';
+      splashContainer.appendChild(gameTitle);
 
-      pContainer = document.createElement('div');
-      pContainer.setAttribute('id', 'p-container');
-      splashContainer.appendChild(pContainer);
+      instructionsContainer = document.createElement('div');
+      instructionsContainer.setAttribute('id', 'p-container');
+      splashContainer.appendChild(instructionsContainer);
 
-      splashInstruct = document.createElement('p');
-      splashInstruct.innerText = 'This is truly an almighty mountain. I get carried away with this brush cleaning.'
-      pContainer.appendChild(splashInstruct);
+      gameInstructions = document.createElement('p');
+      gameInstructions.innerText = '- Click as many divs as you can in X amount of time -'
+      instructionsContainer.appendChild(gameInstructions);
 
-      splashButton = document.createElement('button');
-      splashButton.innerText = 'START';
-      splashContainer.appendChild(splashButton);
+      startButton = document.createElement('button');
+      startButton.innerText = 'START';
+      splashContainer.appendChild(startButton);
 
-    //append to mainElement
-        mainElement.appendChild(splashContainer);
+       //append to mainElement
+       mainElement.appendChild(splashContainer);
     
+      //bind click on star button
+      startButton.addEventListener('click', handleStartButton);   
+
+    } // end of buildSplash()
+
+    function eraseSplash(){
+
+      // unbind click on star button
+      startButton.removeEventListener('click', handleStartButton);
+      // remove splash screen from DOM
+      splashContainer.remove();
       
-
-   
-
     }
 
-    buildSplash();
+    // -- Game
+    function buildGame() {
+
+      stage = 'game'; // What is stage for?
+      game = new Game(mainElement);
+
+      window.setTimeout(function () { // Delay 
+        eraseGame();
+        buildGameOver();
+        }, 5000);
+    }
+
+    function eraseGame(){
+        game.remove();
+    }
+
+    //-- Game Over
+     
+    var gameOverContainer;
+    var scoreContainer;
+    var gameOverTitle;
+    var score;
+    var msgContainer;
+    var msg;
+    var restartButton;
+    var handleRestartButton = function(){
+        erasegameOver();
+        buildGameOver();
+    };
+
+    function buildGameOver(){
+
+        gameOverContainer = document.createElement('div');
+        gameOverContainer.setAttribute('id', "gameover-container");
+
+        gameOverTitle = document.createElement('h1');
+        gameOverTitle.innerText = "GAME OVER";
+        gameOverContainer.appendChild(gameOverTitle);
+
+
+        scoreContainer = document.createElement('div');
+        scoreContainer.setAttribute('id', "score-container")
+        gameOverContainer.appendChild(scoreContainer);
+
+       
+
+        score = document.createElement('p');
+        score.innerText = "score: ";
+        scoreContainer.appendChild(score);
+
+        msgContainer = document.createElement('div');
+        msgContainer.setAttribute('id', 'msg-container');
+        gameOverContainer.appendChild(msgContainer);
+
+        msg = document.createElement('p');
+        msg.innerText = "Good Job";
+        msgContainer.appendChild(msg);
+
+        restartButton = document.createElement('button');
+        restartButton.innerText = "RESTART";
+        gameOverContainer.appendChild(restartButton);
+
+        mainElement.appendChild(gameOverContainer);
+    }
+
+    buildGameOver();
+    //buildSplash();
 }
 window.onload = main;
