@@ -45,6 +45,27 @@ function Game (mainElement){
   mole1.setAttribute("id", "mole1");
   self.moleContainer.appendChild(mole1);
 
+  var mole2 = document.createElement('div');
+  mole2.setAttribute("class", "mole");
+  mole2.setAttribute("id", "mole2");
+  self.moleContainer.appendChild(mole2);
+
+  var mole3 = document.createElement('div');
+  mole3.setAttribute("class", "mole");
+  mole3.setAttribute("id", "mole3");
+  self.moleContainer.appendChild(mole3);
+
+  var mole4 = document.createElement('div');
+  mole4.setAttribute("class", "mole");
+  mole4.setAttribute("id", "mole4");
+  self.moleContainer.appendChild(mole4);
+
+
+  var mole5 = document.createElement('div');
+  mole5.setAttribute("class", "mole");
+  mole5.setAttribute("id", "mole5");
+  self.moleContainer.appendChild(mole5);
+
   self.wall2 = document.createElement('div');
   self.wall2.setAttribute('id', 'wall2');
   self.superContainer.appendChild(self.wall2);
@@ -55,7 +76,7 @@ function Game (mainElement){
 
   self.wall3 = document.createElement('div');
   self.wall3.setAttribute('id', 'wall3');
-  self.superContainer.appendChild(self.wall2);
+  self.superContainer.appendChild(self.wall3);
 
   self.wallimg3 = document.createElement('img');
   self.wallimg3.src = "./images/wall3.png";
