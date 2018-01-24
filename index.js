@@ -8,7 +8,7 @@ function main(){ // Main function loads all the content?..
 
     var mainElement = document.querySelector('#site-main');
 
-    var stage;
+    
     var game;
 
     // Splash Screen (Initial screen)
@@ -19,13 +19,13 @@ function main(){ // Main function loads all the content?..
     var startButton;
     var handleStartButton = function(){
         eraseSplash();
-        beginGame();
+        buildGame();
     };
 
 
     function buildSplash(){  
 
-      stage = 'splash';
+      
 
       // create dom elements
       splashContainer = document.createElement('div');
@@ -69,7 +69,6 @@ function main(){ // Main function loads all the content?..
     // -- Game
     function buildGame() {
 
-      stage = 'game'; // What is stage for?
       game = new Game(mainElement);
 
       window.setTimeout(function () { // Delay 
@@ -92,8 +91,8 @@ function main(){ // Main function loads all the content?..
     var msg;
     var restartButton;
     var handleRestartButton = function(){
-        erasegameOver();
-        buildGameOver();
+        eraseGameOver();
+        buildGame();
     };
 
     function buildGameOver(){
@@ -129,9 +128,18 @@ function main(){ // Main function loads all the content?..
         gameOverContainer.appendChild(restartButton);
 
         mainElement.appendChild(gameOverContainer);
-    }
 
-    buildGameOver();
-    //buildSplash();
+        // bind click on restart button
+        restartButton.addEventListener('click', handleRestartButton);
+    }
+    
+    function eraseGameOver(){
+        // unbond click from restart button
+        restartButton.removeEventListener('click', handleRestartButton);
+        // remove gameOver from dom
+        gameOverContainer.remove();
+    }
+    //buildGameOver();
+    buildSplash();
 }
 window.onload = main;
