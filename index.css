@@ -4,7 +4,7 @@
 
 
 
-/* ---- typography ---- */
+/* ---- General ---- */
 
 body {
   margin: 0;
@@ -17,7 +17,8 @@ body {
 
 
 
-/* ---- layout ---- */
+/* Splash */ 
+
 
 #splash-container{
    
@@ -28,29 +29,6 @@ body {
     top: 200px;
     
 }
-
-#gameover-container{
-    font-family: Arial, Helvetica, sans-serif;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    top: 200px;
-}  
-
-
-/* ---- components ---- */
-
-
-
-
-#game-over {
-  text-align: center;
-}
-
-
-
-
 
 #p-container{
    background-color: rgba(80, 23, 23, 0.3);
@@ -63,9 +41,6 @@ body {
 }
 
 
-
-
-
 #splash-container h1{
    color: white; 
    font-size: 4em;
@@ -76,7 +51,7 @@ body {
   
 }
 
- button{
+button{
  
     background-color: rgb(12, 136, 89); 
     border: 4px solid #4CAF50;
@@ -96,3 +71,150 @@ button:active{
     color: rgb(255, 212, 71);
 }
 
+
+
+
+
+
+
+
+
+/* ---- GAME ---- */
+
+.score{
+  display:flex;
+  flex-direction:row nowrap; 
+  justify-content: flex-end;
+  margin-right: 200px;
+
+}
+
+.score p{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 2em;
+}
+
+
+
+#wall{
+  position: absolute;
+  top: 260px;
+  z-index: 4;
+}
+
+#wall2{
+  position: absolute;
+  top: 260px;
+  z-index: 2;
+}
+
+#wall3{
+  height: 450px;
+  position: absolute;
+  top: 260px;
+  z-index: 0;
+}
+
+#moles-container{
+  padding: 0;
+  margin: 0 ;      
+  display:flex;
+  flex-flow: row nowrap;
+  flex-shrink: 0;
+  justify-content: space-between;
+  position: relative;
+  top: 100px;
+  flex-shrink: 0;
+  
+}
+
+
+
+.mole p{
+
+  margin: 50px auto;
+}
+
+.mole{
+ 
+ background: rgb(255, 99, 71);
+ width: 200px;
+ height: 300px;
+ border: 1px solid  rgb(206, 79, 57);
+ font-size: 1.8em;
+ font-weight: 700;
+ text-align: center;   
+ list-style: none;
+ font-family: Arial, Helvetica, sans-serif;
+ color: white;
+ flex-shrink: 0;
+}
+
+#mole1 {
+  position: relative;
+  left: 150px;
+  top: 70px;
+  z-index: 3;
+  animation: move 0.5s ease infinite alternate;
+  transform-origin: bottom center;
+}
+
+#mole2 {
+  position: relative; 
+  top: 10px;
+  z-index: 1;
+  animation: move 0.8s ease-in-out infinite alternate;
+  transform-origin: bottom center;
+}
+
+#mole5 {
+  position: relative; 
+  right: 150px;
+  top: 70px;
+  z-index: 3;
+  animation: move 0.7s ease-in-out infinite alternate;
+  transform-origin: bottom center;
+}
+
+#mole3{
+  position: relative;
+  top: 50px;
+  z-index: 3;
+  animation: move 0.6s ease-in-out infinite alternate;
+  transform-origin: bottom center;
+}
+
+
+#mole4 {
+  position: relative;
+  top: 10px;
+  z-index: 1;
+  animation: move 1s ease-in-out infinite alternate;
+  transform-origin: bottom center;
+  
+}
+
+
+
+@keyframes move {
+  0%{ transform: scaleY(0); }
+  100%{ transform: scaleY(1); }
+}
+
+
+
+
+
+
+
+
+/* Game-Over */
+
+#gameover-container{
+    font-family: Arial, Helvetica, sans-serif;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 200px;
+}  
