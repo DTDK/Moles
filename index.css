@@ -81,20 +81,97 @@ button:active{
 
 /* ---- GAME ---- */
 
-.score{
+#grand-container{
+  
+}
+
+#score-msg{
+  margin-right: 430px;
   display:flex;
   flex-direction:row nowrap; 
   justify-content: flex-end;
-  margin-right: 200px;
+  position: relative;
+  bottom: 250px;
 
 }
 
-.score p{
+#score p{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 2em;
 }
 
+#moles-containerGhost{
+  padding: 0;
+  margin: 0 ;      
+  display:flex;
+  flex-flow: row nowrap;
+  flex-shrink: 0;
+  justify-content: space-between;
+  position: relative;
+  top: 180px;
+  flex-shrink: 0;
+  
+}
 
+
+.moleGhost{
+ 
+ width: 200px;
+ /*height: 300px;*/
+ border: 1px solid  blue;
+ 
+}
+
+
+
+#mole1Ghost {
+  height: 280px;
+  position: relative;
+  left: 150px;
+  top: 20px;
+  z-index: 7;
+  animation: move 0.5s ease infinite alternate;
+  transform-origin: bottom center;
+}
+
+#mole2Ghost {
+  position: relative; 
+  height: 280px;  
+  bottom: 18px;
+  z-index: 5;
+  animation: move 0.8s ease-in-out infinite alternate;
+  transform-origin: bottom center;
+}
+
+#mole5Ghost {
+  position: relative; 
+  height: 280px;  
+  top: 20px;
+  right: 150px;
+  z-index: 7;
+  animation: move 0.7s ease-in-out infinite alternate;
+  transform-origin: bottom center;
+}
+
+#mole3Ghost{
+  position: relative;
+  height: 280px;    
+  top: 20px;
+  z-index: 6;
+  animation: move 0.6s ease-in-out infinite alternate;
+  transform-origin: bottom center;
+}
+
+
+#mole4Ghost {
+  position: relative;
+  height: 270px;
+  bottom: 20px;
+  z-index: 5;
+  animation: move 1s ease-in-out infinite alternate;
+  transform-origin: bottom center;
+  
+}
 
 #wall{
   position: absolute;
@@ -123,7 +200,7 @@ button:active{
   flex-shrink: 0;
   justify-content: space-between;
   position: relative;
-  top: 100px;
+  bottom: 200px;
   flex-shrink: 0;
   
 }
@@ -149,6 +226,8 @@ button:active{
  color: white;
  flex-shrink: 0;
 }
+
+
 
 #mole1 {
   position: relative;
@@ -196,10 +275,10 @@ button:active{
 
 
 
-@keyframes move {
+/*@keyframes move {
   0%{ transform: scaleY(0); }
   100%{ transform: scaleY(1); }
-}
+}*/
 
 
 

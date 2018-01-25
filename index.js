@@ -74,11 +74,11 @@ function main(){ // Main function loads all the content?..
       window.setTimeout(function () { // Delay 
         eraseGame();
         buildGameOver();
-        }, 5000);
+        }, 80000);
     }
 
     function eraseGame(){
-        game.remove();
+        mainElement.removeChild(mainElement.firstChild);
     }
 
     //-- Game Over

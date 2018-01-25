@@ -15,15 +15,54 @@ function Game (mainElement){
   // retrieves the height of the viewport
   self.height = window.innerHeight;
 
-  // create and add dom DOM elements
+ 
+  // Container that holds all the DOM elements
+  self.grandContainer = document.createElement('div');
+  self.grandContainer.setAttribute('id', 'grand-container');
+  mainElement.appendChild(self.grandContainer); 
+  
+  // CLICKABLE MOLES
+
+  self.molesContainerGhost = document.createElement('div');
+  self.molesContainerGhost.setAttribute('id', 'moles-containerGhost');
+  self.grandContainer.appendChild(self.molesContainerGhost);
+
+  var mole1Ghost = document.createElement('div');
+  mole1Ghost.setAttribute("class", "moleGhost");
+  mole1Ghost.setAttribute("id", "mole1Ghost");
+  self.molesContainerGhost.appendChild(mole1Ghost);
+
+  var mole2Ghost = document.createElement('div');
+  mole2Ghost.setAttribute("class", "moleGhost");
+  mole2Ghost.setAttribute("id", "mole2Ghost");
+  self.molesContainerGhost.appendChild(mole2Ghost);
+
+  var mole3Ghost = document.createElement('div');
+  mole3Ghost.setAttribute("class", "moleGhost");
+  mole3Ghost.setAttribute("id", "mole3Ghost");
+  self.molesContainerGhost.appendChild(mole3Ghost);
+
+  var mole4Ghost = document.createElement('div');
+  mole4Ghost.setAttribute("class", "moleGhost");
+  mole4Ghost.setAttribute("id", "mole4Ghost");
+  self.molesContainerGhost.appendChild(mole4Ghost);
+
+  var mole5Ghost = document.createElement('div');
+  mole5Ghost.setAttribute("class", "moleGhost");
+  mole5Ghost.setAttribute("id", "mole5Ghost");
+  self.molesContainerGhost.appendChild(mole5Ghost);
+  
+  // Container that holds the visual game
   self.superContainer = document.createElement('div');
   self.superContainer.setAttribute('id', 'super-container');
-  mainElement.appendChild(self.superContainer);
+  self.grandContainer.appendChild(self.superContainer);
 
+
+  //First Wall
   self.wall = document.createElement('div');
   self.wall.setAttribute('id', 'wall');
   self.superContainer.appendChild(self.wall);
-
+  
   self.wallimg = document.createElement('img');
   self.wallimg.src =  "./images/wall1.png";
   self.wall.appendChild(self.wallimg);
@@ -115,7 +154,20 @@ for (var i = 0; i < attributes.length; i++) {
   self.wallimg3.src = "./images/wall3.png";
   self.wall3.appendChild(self.wallimg3);
 
+  mole1Ghost.addEventListener('click', function(){
+    console.log('mole1Ghost');
+  })
 
+  mole2Ghost.addEventListener('click', function () {
+    console.log('mole2Ghost');
+  })
+
+
+  // for(var i = 0; i< 10000; i++){
+  //   if (i % 1000 === 0) {
+  //     console.log(window.getComputedStyle(mole5).transform);
+  //   }
+  // }
 
 
 
