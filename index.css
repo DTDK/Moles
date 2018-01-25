@@ -81,12 +81,12 @@ button:active{
 
 /* ---- GAME ---- */
 
-#grand-container{
-  
+#super-container{
+    
 }
 
 #score-msg{
-  margin-right: 430px;
+  margin-right: 340px;
   display:flex;
   flex-direction:row nowrap; 
   justify-content: flex-end;
@@ -95,9 +95,18 @@ button:active{
 
 }
 
-#score p{
+#score-ul{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 2em;
+  list-style: none;
+}
+
+#score-li{
+  
+}
+
+#ghostMoles{
+    
 }
 
 #moles-containerGhost{
@@ -118,7 +127,7 @@ button:active{
  
  width: 200px;
  /*height: 300px;*/
- border: 1px solid  blue;
+ border: 1px solid  blue;   
  
 }
 
@@ -176,12 +185,14 @@ button:active{
 #wall{
   position: absolute;
   top: 260px;
+  left: 30px;
   z-index: 4;
 }
 
 #wall2{
   position: absolute;
   top: 260px;
+  left: 30px;
   z-index: 2;
 }
 
@@ -189,6 +200,7 @@ button:active{
   height: 450px;
   position: absolute;
   top: 260px;
+  left: 30px;
   z-index: 0;
 }
 
@@ -275,10 +287,10 @@ button:active{
 
 
 
-/*@keyframes move {
+@keyframes move {
   0%{ transform: scaleY(0); }
   100%{ transform: scaleY(1); }
-}*/
+}
 
 
 

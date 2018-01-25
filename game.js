@@ -5,6 +5,12 @@ function Game (mainElement){
   self = this;
 
 
+  var m1;
+  var m2;
+  var m3;
+  var m4;
+  var m5;
+
 
   self.mainElement = mainElement;
 
@@ -19,13 +25,16 @@ function Game (mainElement){
   // Container that holds all the DOM elements
   self.grandContainer = document.createElement('div');
   self.grandContainer.setAttribute('id', 'grand-container');
-  mainElement.appendChild(self.grandContainer); 
+  self.mainElement.appendChild(self.grandContainer); 
   
   // CLICKABLE MOLES
+  self.ghostMoles = document.createElement('div');
+  self.ghostMoles.setAttribute('id', 'ghostMoles');
+  self.grandContainer.appendChild(self.ghostMoles); 
 
   self.molesContainerGhost = document.createElement('div');
   self.molesContainerGhost.setAttribute('id', 'moles-containerGhost');
-  self.grandContainer.appendChild(self.molesContainerGhost);
+  self.ghostMoles.appendChild(self.molesContainerGhost);
 
   var mole1Ghost = document.createElement('div');
   mole1Ghost.setAttribute("class", "moleGhost");
@@ -71,9 +80,18 @@ function Game (mainElement){
   self.scoreMsgContainer.setAttribute('id', 'score-msg');
   self.superContainer.appendChild(self.scoreMsgContainer);
 
-  self.score = document.createElement('p');
-  self.score.innerText = "SCORE : ";
-  self.scoreMsgContainer.appendChild(self.score);
+  self.scoreUl = document.createElement('ul');
+  self.scoreUl.setAttribute('id','score-ul');
+  self.scoreMsgContainer.appendChild(self.scoreUl);
+
+  self.scoreLi = document.createElement('li');
+  self.scoreLi.innerText = 'Score : '
+  self.scoreLi.setAttribute('id','score-li');
+  self.scoreUl.appendChild(self.scoreLi);
+
+  self.scoreSpan = document.createElement('span');
+  parseInt(self.scoreSpan.innerText = '0');
+  self.scoreLi.appendChild(self.scoreSpan);
 
   self.moleContainer = document.createElement('div');
   self.moleContainer.setAttribute('id', 'moles-container');
@@ -155,11 +173,41 @@ for (var i = 0; i < attributes.length; i++) {
   self.wall3.appendChild(self.wallimg3);
 
   mole1Ghost.addEventListener('click', function(){
-    console.log('mole1Ghost');
+    m1 = 6;
+    var points = parseInt(self.scoreSpan.innerText);
+    points += m1;
+    self.scoreSpan.innerText = points;  
+    console.log(self.scoreSpan); 
   })
 
   mole2Ghost.addEventListener('click', function () {
-    console.log('mole2Ghost');
+     m2 = 8;
+    var points = parseInt(self.scoreSpan.innerText);
+    points += m2;
+    self.scoreSpan.innerText = points;
+    console.log(self.scoreSpan); 
+  })
+
+  mole3Ghost.addEventListener('click', function () {
+     m3 = 3;
+    var points = parseInt(self.scoreSpan.innerText);
+    points += m3;
+    self.scoreSpan.innerText = points;
+   
+    console.log(self.scoreSpan); 
+
+  })
+
+  mole4Ghost.addEventListener('click', function () {
+     m4 = 5;
+    self.scoreSpan += m4;
+    console.log(self.scoreSpan); 
+  })
+
+  mole5Ghost.addEventListener('click', function () {
+     m5 = 10;
+    self.scoreSpan += m5;
+    console.log(self.scoreSpan); 
   })
 
 

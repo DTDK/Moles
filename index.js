@@ -3,8 +3,7 @@
 
 function main(){ // Main function loads all the content?..
 
-    var score;
-    var speed;
+    
 
     var mainElement = document.querySelector('#site-main');
 
