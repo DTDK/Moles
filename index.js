@@ -41,7 +41,7 @@ function main(){ // Main function loads all the content?..
       splashContainer.appendChild(instructionsContainer);
 
       gameInstructions = document.createElement('p');
-      gameInstructions.innerText = '- Click as many divs as you can in X amount of time -'
+      gameInstructions.innerText = '- Click as many moles as you can in 20 seconds -'
       instructionsContainer.appendChild(gameInstructions);
 
       startButton = document.createElement('button');
@@ -73,7 +73,7 @@ function main(){ // Main function loads all the content?..
       window.setTimeout(function () { // Delay 
         eraseGame();
         buildGameOver();
-        }, 200000);
+        }, 20000);
     }
 
     function eraseGame(){
@@ -111,7 +111,7 @@ function main(){ // Main function loads all the content?..
        
 
         score = document.createElement('p');
-        score.innerText = "score: ";
+        /*score.innerText = "score: ";*/
         scoreContainer.appendChild(score);
 
         msgContainer = document.createElement('div');
@@ -119,10 +119,11 @@ function main(){ // Main function loads all the content?..
         gameOverContainer.appendChild(msgContainer);
 
         msg = document.createElement('p');
-        msg.innerText = "Good Job";
+        msg.innerText = "You need to practice";
         msgContainer.appendChild(msg);
 
         restartButton = document.createElement('button');
+        restartButton.setAttribute('id', 'restart-button');
         restartButton.innerText = "RESTART";
         gameOverContainer.appendChild(restartButton);
 

@@ -14,6 +14,7 @@ body {
   font-size: 16px;
   height:640px;
   overflow: hidden;
+  background-image: url('./images/bgsplash.png');
 }
 
 
@@ -28,6 +29,7 @@ body {
     align-items: center;
     position: relative;
     top: 200px;
+   
     
 }
 
@@ -35,10 +37,10 @@ body {
    background-color: rgba(80, 23, 23, 0.3);
    position:relative;
    bottom: 80px;
-   font-size: em;
+   font-size: 1.8em;
    margin: 25px;
    padding: 25px;
-
+   color: white;
 }
 
 
@@ -83,7 +85,7 @@ button:active{
 /* ---- GAME ---- */
 
 #super-container{
-    
+    background-color: rgb(15, 43, 85);
 }
 
 #score-msg{
@@ -103,7 +105,8 @@ button:active{
 }
 
 #score-li{
-  
+  font-size: 3em;
+  color: white;
 }
 
 #ghostMoles{
@@ -189,14 +192,14 @@ border: 1px solid  blue;
 
 #wall{
   position: absolute;
-  top: 540px;
+  top: 520px;
   left: 0px;
   z-index: 4;
 }
 
 #wall2{
   position: absolute;
-  top: 345px;
+  top: 460px;
   left: 0px;
   z-index: 2;
 }
@@ -234,13 +237,8 @@ border: 1px solid  blue;
  /*background: rgb(255, 99, 71);*/
  width: 200px;
  height: 300px;
- border: 1px solid  rgb(39, 10, 46);
- font-size: 1.8em;
- font-weight: 700;
- text-align: center;   
- list-style: none;
- font-family: Arial, Helvetica, sans-serif;
- color: white;
+ 
+ 
  flex-shrink: 0;
   background-image: url('./images/mole.png');
   background-size: contain;
@@ -257,7 +255,7 @@ border: 1px solid  blue;
   left: 150px;
   top: 70px;
   z-index: 3;
-  animation: move 6s ease infinite alternate;
+  animation: move 4s ease infinite alternate;
   transform-origin: bottom center;
 }
 
@@ -265,7 +263,7 @@ border: 1px solid  blue;
   position: relative; 
   top: 10px;
   z-index: 1;
-  animation: move 4s ease-in-out infinite alternate;
+  animation: move-three 2s ease-in-out infinite alternate;
   transform-origin: bottom center;
 }
 
@@ -274,7 +272,7 @@ border: 1px solid  blue;
   right: 150px;
   top: 70px;
   z-index: 3;
-  animation: move 2s ease-in-out infinite alternate;
+  animation: move-two 6s ease-in-out infinite forwards;
   transform-origin: bottom center;
 }
 
@@ -282,7 +280,7 @@ border: 1px solid  blue;
   position: relative;
   top: 50px;
   z-index: 3;
-  animation: move 1s ease-in-out infinite alternate;
+  animation: move 5s ease-in-out infinite forwards;
   transform-origin: bottom center;
 }
 
@@ -291,7 +289,7 @@ border: 1px solid  blue;
   position: relative;
   top: 10px;
   z-index: 1;
-  animation: move 3s ease-in-out infinite forwards;
+  animation: move-four 1s ease-in-out infinite forwards;
   transform-origin: bottom center;
   
 }
@@ -304,8 +302,36 @@ border: 1px solid  blue;
   100% { transform: translateY(300px);}
 }
 
+@keyframes move-two{
+  0% { transform: translateY(300px);}
+  
+  60% { transform: translateY(300px);}
+  98% { transform: translateY(0px);}
+  100% { transform: translateY(300px);}
+}
 
+@keyframes move-three{
+  0% { transform: translateY(300px);}
+  
+  70% { transform: translateY(300px);}
+  98% { transform: translateY(0px);}
+  100% { transform: translateY(300px);}
+}
 
+@keyframes move-four{
+  0% { transform: translateY(300px);}
+  
+  70% { transform: translateY(300px);}
+  98% { transform: translateY(0px);}
+  100% { transform: translateY(300px);}
+}
+@keyframes test{
+  0% { transform: translateY(300px);}
+  
+  
+  98% { transform: translateY(0px);}
+  100% { transform: translateY(300px);}
+}
 
 
 
@@ -319,9 +345,21 @@ border: 1px solid  blue;
 
 #gameover-container{
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
     display:flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    top: 200px;
+    top: 100px;
+    color: white;
+    background-image: url('./images/bgsplash.png');
 }  
+
+#restart-button{
+    font-size: 1em;
+}
+
+#msg-container{
+    position: relative;
+    bottom: 50px;
+}

@@ -152,8 +152,8 @@ function Game (mainElement){
   
   mole5.appendChild(self.moleText5);
 
-  /* var attributes = ["class", "type", "checked"];
-var values = ["my-class", "checkbox", "checked"];
+  /* var attributes = ["class", "id"];
+var values = ["mole", "mole1"];
 
 for (var i = 0; i < attributes.length; i++) {
   input.setAttribute(attributes[i], values[i])
@@ -165,7 +165,7 @@ for (var i = 0; i < attributes.length; i++) {
   self.superContainer.appendChild(self.wall2);
 
   self.wallimg2 = document.createElement('img');
-  self.wallimg2.src = "./images/pared2.png";
+  self.wallimg2.src = "./images/paredshort2.png";
   self.wall2.appendChild(self.wallimg2);
 
   self.wall3 = document.createElement('div');
@@ -202,7 +202,7 @@ for (var i = 0; i < attributes.length; i++) {
   })
 
   mole4.addEventListener('click', function () {
-     m4 = 5;
+     m4 = 50;
      var points = parseInt(self.scoreSpan.innerText);
      points += m4;
      self.scoreSpan.innerText = points;
