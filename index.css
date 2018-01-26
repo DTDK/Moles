@@ -128,7 +128,7 @@ button:active{
  
  width: 200px;
  /*height: 300px;*/
-/* border: 1px solid  blue; */  
+border: 1px solid  blue;  
  
 }
 
@@ -140,7 +140,7 @@ button:active{
   left: 150px;
   top: 20px;
   z-index: 7;
-  animation: move 0.5s ease infinite alternate;
+  animation: move 6s ease infinite alternate;
   transform-origin: bottom center;
 }
 
@@ -149,7 +149,7 @@ button:active{
   height: 280px;  
   bottom: 18px;
   z-index: 5;
-  animation: move 0.8s ease-in-out infinite alternate;
+  animation: move 4s ease-in-out infinite alternate;
   transform-origin: bottom center;
 }
 
@@ -159,7 +159,7 @@ button:active{
   top: 20px;
   right: 150px;
   z-index: 7;
-  animation: move 0.7s ease-in-out infinite alternate;
+  animation: move 2s ease-in-out infinite alternate;
   transform-origin: bottom center;
 }
 
@@ -168,7 +168,7 @@ button:active{
   height: 280px;    
   top: 20px;
   z-index: 6;
-  animation: move 0.6s ease-in-out infinite alternate;
+  animation: move 1s ease-in-out infinite alternate;
   transform-origin: bottom center;
 }
 
@@ -178,30 +178,30 @@ button:active{
   height: 270px;
   bottom: 20px;
   z-index: 5;
-  animation: movecuatro 1s ease-in-out infinite forwards;
+  animation: move 3s ease-in-out infinite forwards;
   transform-origin: bottom center;
   
 }
 
 #wall{
   position: absolute;
-  top: 260px;
-  left: 30px;
+  top: 345px;
+  left: 0px;
   z-index: 4;
 }
 
 #wall2{
   position: absolute;
-  top: 260px;
-  left: 30px;
+  top: 345px;
+  left: 0px;
   z-index: 2;
 }
 
 #wall3{
   height: 450px;
   position: absolute;
-  top: 260px;
-  left: 30px;
+  top: 345px;
+  left: 0px;
   z-index: 0;
 }
 
@@ -253,7 +253,7 @@ button:active{
   left: 150px;
   top: 70px;
   z-index: 3;
-  animation: move 0.5s ease infinite alternate;
+  animation: move 6s ease infinite alternate;
   transform-origin: bottom center;
 }
 
@@ -261,7 +261,7 @@ button:active{
   position: relative; 
   top: 10px;
   z-index: 1;
-  animation: move 0.8s ease-in-out infinite alternate;
+  animation: move 4s ease-in-out infinite alternate;
   transform-origin: bottom center;
 }
 
@@ -270,7 +270,7 @@ button:active{
   right: 150px;
   top: 70px;
   z-index: 3;
-  animation: move 0.7s ease-in-out infinite alternate;
+  animation: move 2s ease-in-out infinite alternate;
   transform-origin: bottom center;
 }
 
@@ -278,7 +278,7 @@ button:active{
   position: relative;
   top: 50px;
   z-index: 3;
-  animation: move 0.6s ease-in-out infinite alternate;
+  animation: move 1s ease-in-out infinite alternate;
   transform-origin: bottom center;
 }
 
@@ -287,31 +287,22 @@ button:active{
   position: relative;
   top: 10px;
   z-index: 1;
-  animation: movecuatro 1s ease-in-out infinite forwards;
+  animation: move 3s ease-in-out infinite forwards;
   transform-origin: bottom center;
   
 }
 
-/*@keyframes movecuatro{
+@keyframes move{
   0% { transform: translateY(300px);}
- 
+  30% { transform: translateY(300px);}
   90% { transform: translateY(300px);}
-  70% { transform: translateY(0px);}
+  95% { transform: translateY(0px);}
   100% { transform: translateY(300px);}
 }
 
 
 
 
-
-@keyframes move {
-  0%{ transform: translateY(300px); }
-
-  80%{ transform: translateY(0); }
-
-  100%{transform: translateY(0);}
-  
-}
 
 
 

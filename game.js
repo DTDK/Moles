@@ -73,7 +73,7 @@ function Game (mainElement){
   self.superContainer.appendChild(self.wall);
   
   self.wallimg = document.createElement('img');
-  self.wallimg.src =  "/images/wall1.png";
+  self.wallimg.src =  "./images/pared.png";
   self.wall.appendChild(self.wallimg);
 
   self.scoreMsgContainer = document.createElement('div');
@@ -161,7 +161,7 @@ for (var i = 0; i < attributes.length; i++) {
   self.superContainer.appendChild(self.wall2);
 
   self.wallimg2 = document.createElement('img');
-  self.wallimg2.src = "/images/wall2.png";
+  self.wallimg2.src = "./images/pared2.png";
   self.wall2.appendChild(self.wallimg2);
 
   self.wall3 = document.createElement('div');
@@ -169,7 +169,7 @@ for (var i = 0; i < attributes.length; i++) {
   self.superContainer.appendChild(self.wall3);
 
   self.wallimg3 = document.createElement('img');
-  self.wallimg3.src = "./images/wall3.png";
+  self.wallimg3.src = "./images/pared3.png";
   self.wall3.appendChild(self.wallimg3);
 
   mole1Ghost.addEventListener('click', function(){
