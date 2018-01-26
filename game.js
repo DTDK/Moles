@@ -104,7 +104,7 @@ function Game (mainElement){
   self.moleContainer.appendChild(mole1);
 
   self.moleText1 = document.createElement('p');
-  self.moleText1.innerText = "mole 1";
+  
   mole1.appendChild(self.moleText1);
 
  // --Create Mole2 --
@@ -114,7 +114,7 @@ function Game (mainElement){
   self.moleContainer.appendChild(mole2);
 
   self.moleText2 = document.createElement('p');
-  self.moleText2.innerText = "Mole 2";
+
   mole2.appendChild(self.moleText2);
 
   // --Create Mole3 --
@@ -124,7 +124,7 @@ function Game (mainElement){
   self.moleContainer.appendChild(mole3);
 
   self.moleText3 = document.createElement('p');
-  self.moleText3.innerText = "Mole 3";
+
   mole3.appendChild(self.moleText3);
 
   // --Create Mole4 --
@@ -134,7 +134,7 @@ function Game (mainElement){
   self.moleContainer.appendChild(mole4);
   
   self.moleText4 = document.createElement('p');
-  self.moleText4.innerText = "Mole 4";
+  
   mole4.appendChild(self.moleText4);
 
 
@@ -145,7 +145,7 @@ function Game (mainElement){
   self.moleContainer.appendChild(mole5);
 
   self.moleText5 = document.createElement('p');
-  self.moleText5.innerText = "Mole 5";
+  
   mole5.appendChild(self.moleText5);
 
   /* var attributes = ["class", "type", "checked"];
