@@ -117,7 +117,7 @@ button:active{
   flex-shrink: 0;
   justify-content: space-between;
   position: relative;
-  top: 180px;
+  top: 210px;
   flex-shrink: 0;
   
 }
@@ -177,7 +177,7 @@ button:active{
   height: 270px;
   bottom: 20px;
   z-index: 5;
-  animation: move 1s ease-in-out infinite alternate;
+  animation: movecuatro 1s ease-in-out infinite forwards;
   transform-origin: bottom center;
   
 }
@@ -226,7 +226,7 @@ button:active{
 
 .mole{
  
- background: rgb(255, 99, 71);
+ /*background: rgb(255, 99, 71);*/
  width: 200px;
  height: 300px;
  border: 1px solid  rgb(206, 79, 57);
@@ -242,6 +242,11 @@ button:active{
 
 
 #mole1 {
+
+  background-image: url('topoPeque.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+ 
   position: relative;
   left: 150px;
   top: 70px;
@@ -280,16 +285,30 @@ button:active{
   position: relative;
   top: 10px;
   z-index: 1;
-  animation: move 1s ease-in-out infinite alternate;
+  animation: movecuatro 1s ease-in-out infinite forwards;
   transform-origin: bottom center;
   
 }
 
+@keyframes movecuatro{
+  0% { transform: translateY(300px);}
+ 
+  90% { transform: translateY(300px);}
+  70% { transform: translateY(0px);}
+  100% { transform: translateY(300px);}
+}
+
+
+
 
 
 @keyframes move {
-  0%{ transform: scaleY(0); }
-  100%{ transform: scaleY(1); }
+  0%{ transform: translateY(300px); }
+
+  80%{ transform: translateY(0); }
+
+  100%{transform: translateY(0);}
+  
 }
 
 

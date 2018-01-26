@@ -173,41 +173,44 @@ for (var i = 0; i < attributes.length; i++) {
   self.wall3.appendChild(self.wallimg3);
 
   mole1Ghost.addEventListener('click', function(){
-    m1 = 6;
-    var points = parseInt(self.scoreSpan.innerText);
-    points += m1;
-    self.scoreSpan.innerText = points;  
-    console.log(self.scoreSpan); 
+     m1 = 6;
+     var points = parseInt(self.scoreSpan.innerText);
+     points += m1;
+     self.scoreSpan.innerText = points;  
+     console.log(self.scoreSpan); 
   })
 
   mole2Ghost.addEventListener('click', function () {
      m2 = 8;
-    var points = parseInt(self.scoreSpan.innerText);
-    points += m2;
-    self.scoreSpan.innerText = points;
-    console.log(self.scoreSpan); 
+     var points = parseInt(self.scoreSpan.innerText);
+     points += m2;
+     self.scoreSpan.innerText = points;
+     console.log(self.scoreSpan); 
   })
 
   mole3Ghost.addEventListener('click', function () {
      m3 = 3;
-    var points = parseInt(self.scoreSpan.innerText);
-    points += m3;
-    self.scoreSpan.innerText = points;
-   
-    console.log(self.scoreSpan); 
+     var points = parseInt(self.scoreSpan.innerText);
+     points += m3;
+     self.scoreSpan.innerText = points;
+     console.log(self.scoreSpan); 
 
   })
 
   mole4Ghost.addEventListener('click', function () {
      m4 = 5;
-    self.scoreSpan += m4;
-    console.log(self.scoreSpan); 
+     var points = parseInt(self.scoreSpan.innerText);
+     points += m4;
+     self.scoreSpan.innerText = points;
+     console.log(self.scoreSpan); 
   })
 
   mole5Ghost.addEventListener('click', function () {
      m5 = 10;
-    self.scoreSpan += m5;
-    console.log(self.scoreSpan); 
+     var points = parseInt(self.scoreSpan.innerText);
+     points += m5;
+     self.scoreSpan.innerText = points;
+     console.log(self.scoreSpan); 
   })
 
 

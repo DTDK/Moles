@@ -12,6 +12,14 @@ body {
     top: 200px;
 }  
 
+.foto{
+    width:200px;
+    height: 300px;
+    border: 1px solid red;
+    background-image: url('topoPeque.png');
+  
+ 
+}
 /*#p-container{
    background-color: rgba(128, 128, 128, 0.6);
    position:relative;
