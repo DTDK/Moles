@@ -27,41 +27,6 @@ function Game (mainElement){
   self.grandContainer.setAttribute('id', 'grand-container');
   self.mainElement.appendChild(self.grandContainer); 
   
-
-
-  // CLICKABLE MOLES
-  /*self.ghostMoles = document.createElement('div');
-  self.ghostMoles.setAttribute('id', 'ghostMoles');
-  self.grandContainer.appendChild(self.ghostMoles); 
-
-  self.molesContainerGhost = document.createElement('div');
-  self.molesContainerGhost.setAttribute('id', 'moles-containerGhost');
-  self.ghostMoles.appendChild(self.molesContainerGhost);
-
-  var mole1Ghost = document.createElement('div');
-  mole1Ghost.setAttribute("class", "moleGhost");
-  mole1Ghost.setAttribute("id", "mole1Ghost");
-  self.molesContainerGhost.appendChild(mole1Ghost);
-
-  var mole2Ghost = document.createElement('div');
-  mole2Ghost.setAttribute("class", "moleGhost");
-  mole2Ghost.setAttribute("id", "mole2Ghost");
-  self.molesContainerGhost.appendChild(mole2Ghost);
-
-  var mole3Ghost = document.createElement('div');
-  mole3Ghost.setAttribute("class", "moleGhost");
-  mole3Ghost.setAttribute("id", "mole3Ghost");
-  self.molesContainerGhost.appendChild(mole3Ghost);
-
-  var mole4Ghost = document.createElement('div');
-  mole4Ghost.setAttribute("class", "moleGhost");
-  mole4Ghost.setAttribute("id", "mole4Ghost");
-  self.molesContainerGhost.appendChild(mole4Ghost);
-
-  var mole5Ghost = document.createElement('div');
-  mole5Ghost.setAttribute("class", "moleGhost");
-  mole5Ghost.setAttribute("id", "mole5Ghost");
-  self.molesContainerGhost.appendChild(mole5Ghost);*/
   
   // Container that holds the visible game
   self.superContainer = document.createElement('div');
@@ -69,7 +34,7 @@ function Game (mainElement){
   self.grandContainer.appendChild(self.superContainer);
 
 
-  //First Wall
+  //--First Wall--
   
 
   self.wall = document.createElement('div');
@@ -79,7 +44,7 @@ function Game (mainElement){
   self.wallimg = document.createElement('img');
   self.wallimg.src =  "./images/paredshort1.png";
   self.wall.appendChild(self.wallimg);
-
+ // --Score--
   self.scoreMsgContainer = document.createElement('div');
   self.scoreMsgContainer.setAttribute('id', 'score-msg');
   self.superContainer.appendChild(self.scoreMsgContainer);
@@ -210,7 +175,7 @@ for (var i = 0; i < attributes.length; i++) {
   })
 
   mole5.addEventListener('click', function () {
-     m5 = 10;
+     m5 = 3;
      var points = parseInt(self.scoreSpan.innerText);
      points += m5;
      self.scoreSpan.innerText = points;

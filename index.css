@@ -109,11 +109,6 @@ button:active{
   color: white;
 }
 
-#ghostMoles{
-    
-}
-
-
 
 
 #moles-containerGhost{
@@ -139,56 +134,6 @@ border: 1px solid  blue;
 }
 
 
-
-/*#mole1Ghost {
-  height: 280px;
-  position: relative;
-  left: 150px;
-  top: 20px;
-  z-index: 7;
-  animation: move 6s ease infinite alternate;
-  transform-origin: bottom center;
-}
-
-#mole2Ghost {
-  position: relative; 
-  height: 280px;  
-  bottom: 18px;
-  z-index: 5;
-  animation: move 4s ease-in-out infinite alternate;
-  transform-origin: bottom center;
-}
-
-#mole5Ghost {
-  position: relative; 
-  height: 280px;  
-  top: 20px;
-  right: 150px;
-  z-index: 7;
-  animation: move 2s ease-in-out infinite alternate;
-  transform-origin: bottom center;
-}
-
-#mole3Ghost{
-  position: relative;
-  height: 280px;    
-  top: 20px;
-  z-index: 6;
-  animation: move 1s ease-in-out infinite alternate;
-  transform-origin: bottom center;
-}
-
-
-#mole4Ghost {
-  position: relative;
-  height: 270px;
-  bottom: 20px;
-  z-index: 5;
-  animation: move 3s ease-in-out infinite forwards;
-  transform-origin: bottom center;
-}
-
-*/
 
 #wall{
   position: absolute;
@@ -255,7 +200,7 @@ border: 1px solid  blue;
   left: 150px;
   top: 70px;
   z-index: 3;
-  animation: move 4s ease infinite alternate;
+  animation: move 5s ease infinite alternate;
   transform-origin: bottom center;
 }
 
@@ -263,7 +208,7 @@ border: 1px solid  blue;
   position: relative; 
   top: 10px;
   z-index: 1;
-  animation: move-three 2s ease-in-out infinite alternate;
+  animation: move-three 3s ease-in-out infinite alternate;
   transform-origin: bottom center;
 }
 
@@ -306,7 +251,7 @@ border: 1px solid  blue;
   0% { transform: translateY(300px);}
   
   60% { transform: translateY(300px);}
-  98% { transform: translateY(0px);}
+  98% { transform: translateY(-100px);}
   100% { transform: translateY(300px);}
 }
 
