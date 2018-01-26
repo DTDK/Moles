@@ -27,8 +27,10 @@ function Game (mainElement){
   self.grandContainer.setAttribute('id', 'grand-container');
   self.mainElement.appendChild(self.grandContainer); 
   
+
+
   // CLICKABLE MOLES
-  self.ghostMoles = document.createElement('div');
+  /*self.ghostMoles = document.createElement('div');
   self.ghostMoles.setAttribute('id', 'ghostMoles');
   self.grandContainer.appendChild(self.ghostMoles); 
 
@@ -59,21 +61,23 @@ function Game (mainElement){
   var mole5Ghost = document.createElement('div');
   mole5Ghost.setAttribute("class", "moleGhost");
   mole5Ghost.setAttribute("id", "mole5Ghost");
-  self.molesContainerGhost.appendChild(mole5Ghost);
+  self.molesContainerGhost.appendChild(mole5Ghost);*/
   
-  // Container that holds the visual game
+  // Container that holds the visible game
   self.superContainer = document.createElement('div');
   self.superContainer.setAttribute('id', 'super-container');
   self.grandContainer.appendChild(self.superContainer);
 
 
   //First Wall
+  
+
   self.wall = document.createElement('div');
   self.wall.setAttribute('id', 'wall');
   self.superContainer.appendChild(self.wall);
   
   self.wallimg = document.createElement('img');
-  self.wallimg.src =  "./images/pared.png";
+  self.wallimg.src =  "./images/paredshort1.png";
   self.wall.appendChild(self.wallimg);
 
   self.scoreMsgContainer = document.createElement('div');
@@ -172,7 +176,7 @@ for (var i = 0; i < attributes.length; i++) {
   self.wallimg3.src = "./images/pared3.png";
   self.wall3.appendChild(self.wallimg3);
 
-  mole1Ghost.addEventListener('click', function(){
+  mole1.addEventListener('click', function(){
      m1 = 6;
      var points = parseInt(self.scoreSpan.innerText);
      points += m1;
@@ -180,7 +184,7 @@ for (var i = 0; i < attributes.length; i++) {
      console.log(self.scoreSpan); 
   })
 
-  mole2Ghost.addEventListener('click', function () {
+  mole2.addEventListener('click', function () {
      m2 = 8;
      var points = parseInt(self.scoreSpan.innerText);
      points += m2;
@@ -188,7 +192,7 @@ for (var i = 0; i < attributes.length; i++) {
      console.log(self.scoreSpan); 
   })
 
-  mole3Ghost.addEventListener('click', function () {
+  mole3.addEventListener('click', function () {
      m3 = 3;
      var points = parseInt(self.scoreSpan.innerText);
      points += m3;
@@ -197,7 +201,7 @@ for (var i = 0; i < attributes.length; i++) {
 
   })
 
-  mole4Ghost.addEventListener('click', function () {
+  mole4.addEventListener('click', function () {
      m4 = 5;
      var points = parseInt(self.scoreSpan.innerText);
      points += m4;
@@ -205,7 +209,7 @@ for (var i = 0; i < attributes.length; i++) {
      console.log(self.scoreSpan); 
   })
 
-  mole5Ghost.addEventListener('click', function () {
+  mole5.addEventListener('click', function () {
      m5 = 10;
      var points = parseInt(self.scoreSpan.innerText);
      points += m5;
